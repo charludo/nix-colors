@@ -63,9 +63,9 @@ pkgs.stdenv.mkDerivation rec {
 
     echo "Changing colours:"
     ./change_color.sh -o ${scheme.slug} /build/gtk-colors -i False -t "$out/share/themes"
-    cp "$out/gtk-4.0/gtk.css" "$out/gtk-4.0/gtk-dark.css"
-    cp "$out/gtk-3.0/gtk.css" "$out/gtk-3.0/gtk-dark.css"
-    cp "$out/gtk-2.0/gtk.css" "$out/gtk-2.0/gtk-dark.css"
+    cp "gtk-4.0/gtk.css" "gtk-4.0/gtk-dark.css"
+    cp "gtk-3.0/gtk.css" "gtk-3.0/gtk-dark.css"
+    cp "gtk-2.0/gtk.css" "gtk-2.0/gtk-dark.css"
     chmod 555 -R .
   '';
 }
